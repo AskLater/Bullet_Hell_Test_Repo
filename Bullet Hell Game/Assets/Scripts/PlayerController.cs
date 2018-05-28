@@ -3,6 +3,9 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour {
 
+	public GameObject Bullet1;
+	public Transform bulletSpawn;
+
 	// Use this for initialization
 	void Start () {
 	
@@ -17,5 +20,20 @@ public class PlayerController : MonoBehaviour {
 		transform.Rotate (0, 0, -x);
 		transform.Translate(x, y, 0);
 
+		if (Input.GetKeyDown(KeyCode.Joystick1Button0)||(Input.GetKeyDown(KeyCode.Space)))
+		{
+			Fire();
+		}
+
 	}
+
+	void Fire ()
+	{
+		var bullet = (GameObject)Instantiate (Bullet1, bulletSpawn.position, bulletSpawn.rotation);
+
+		bullet.GetComponent<Rigidbody2D> ().velocity = bullet.transform.up * 60;
+
+		Destroy (bullet, 2.0f);
+	}
+
 }
