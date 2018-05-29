@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour {
 		transform.Rotate (0, 0, -x);
 		transform.Translate(x, y, 0);
 
-		if (Input.GetKeyDown(KeyCode.Joystick1Button0)||(Input.GetKeyDown(KeyCode.Space)))
+		if (Input.GetKeyDown(KeyCode.Joystick1Button0)||Input.GetKeyDown(KeyCode.Space))
 		{
 			Fire();
 		}
