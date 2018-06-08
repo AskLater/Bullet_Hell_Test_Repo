@@ -140,6 +140,11 @@ Prefab:
       propertyPath: bulletSpawn
       value: 
       objectReference: {fileID: 72590418}
+    - target: {fileID: 114000012596557168, guid: ec3ed3a1586e660439de735e07afc27f,
+        type: 2}
+      propertyPath: MoveSpeed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ec3ed3a1586e660439de735e07afc27f, type: 2}
   m_IsPrefabParent: 0
@@ -447,6 +452,11 @@ Prefab:
     - target: {fileID: 114000011025994886, guid: a51a57187a1d74a48b4325da0741bdd2,
         type: 2}
       propertyPath: moveSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000011025994886, guid: a51a57187a1d74a48b4325da0741bdd2,
+        type: 2}
+      propertyPath: rotationSpeed
       value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []

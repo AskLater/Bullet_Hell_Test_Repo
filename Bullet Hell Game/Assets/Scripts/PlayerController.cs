@@ -5,20 +5,31 @@ public class PlayerController : MonoBehaviour {
 
 	public GameObject Bullet1;
 	public Transform bulletSpawn;
+	public float MoveSpeed;
+	public float rotateSpeed;
 
 	// Use this for initialization
 	void Start () {
 	
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 
-		var x = Input.GetAxis ("Horizontal");
-		var y = Input.GetAxis ("Vertical");
+		float x = Input.GetAxis ("Horizontal");
+		float y = Input.GetAxis ("Vertical");
 
-		transform.Rotate (0, 0, -x);
-		transform.Translate(x, y, 0);
+		Vector3 movement;
+
+		if (rotateSpeed == 0) {
+			movement = new Vector3 (x, y, 0.0f);
+		} else {
+			movement = new Vector3 (0, y, 0.0f);
+		}
+
+		Vector3 rotation = new Vector3 (0.0f, 0.0f, -x);
+		transform.Rotate (rotation*rotateSpeed);
+		transform.Translate (movement*MoveSpeed);
 
 		if (Input.GetKeyDown(KeyCode.Joystick1Button0)||Input.GetKeyDown(KeyCode.Space))
 		{
