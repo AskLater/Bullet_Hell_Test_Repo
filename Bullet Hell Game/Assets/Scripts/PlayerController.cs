@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public Transform bulletSpawn;
 	public float MoveSpeed;
 	public float rotateSpeed;
+	public float Health;
 
 	// Use this for initialization
 	void Start () {
