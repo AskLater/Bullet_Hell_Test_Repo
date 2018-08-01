@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Enemy1Controller : MonoBehaviour {
+public class Enemy1Controller : EnemyScript {
 
 	public Transform target;
 	public int moveSpeed;

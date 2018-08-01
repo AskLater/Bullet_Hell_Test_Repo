@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BulletScript1 : MonoBehaviour {
+public class BulletScript1 : BulletScript {
 
 	// Use this for initialization
 	void Start () {

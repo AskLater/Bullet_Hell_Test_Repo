@@ -2,13 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy2Controller : EnemyScript {
-
-	public GameObject Bullet2;
-	public Transform BulletSpawn;
-	public float moveSpeed;
-	public float rotationSpeed;
-	public float Health;
+public class EnemyScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +11,13 @@ public class Enemy2Controller : EnemyScript {
 	
 	// Update is called once per frame
 	void Update () {
-
-
-
-		//Fire ();
 		
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag.Equals ("Bullet1") == true) {
+			Destroy (gameObject);
+		}
 	}
 }
